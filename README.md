@@ -14,7 +14,7 @@ plot(collage)
 
 ### For a file on the internet, just provide the url!
 
-If you don't like the look, just run the function again and colours will be randomly generated. just adjust your filename to whereever you want to save it
+If you don't like the look, just run the function again and colours will be randomly generated. just adjust your filename to wherever you want to save it.
 
 ```
 sample_human <- load.image('https://github.com/Agihawi/collaRge/blob/master/tests/sample_human.png?raw=true')
