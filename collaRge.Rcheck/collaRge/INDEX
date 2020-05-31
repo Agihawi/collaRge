@@ -1,0 +1,3 @@
+create_collage          A function to create a collage of randomly
+                        colourised image
+randomise_colours       A function to randomise colours in an image

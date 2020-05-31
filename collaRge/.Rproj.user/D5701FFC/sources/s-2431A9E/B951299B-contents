@@ -1,0 +1,26 @@
+#' A function to randomise colours in an image
+#'
+#' This function allows you to randomise RGB values in an imager image
+#' @pretty_image Se the pretty_image to an imager file that you want
+#' @keywords pretty image random colours
+#' @export
+#' @examples
+#' library(imager)
+#' parrots.cp <- load.example("parrots")
+#' randomise_colours(pretty_image)
+randomise_colours <- function(pretty_image) {
+  #define number and subsample of R,G,B to use
+  subsample_n <- floor(runif(n=1, min=1, max=2.9))
+  to_use <- sample(c('R', 'G', 'B'), size=subsample_n, replace=FALSE)
+  
+  if ('R' %in% to_use) {
+    R(pretty_image) <- runif(n=1, min=0, max=1)
+  }
+  if ('G' %in% to_use) {
+    G(pretty_image) <- runif(n=1, min=0, max=1)
+  }
+  if ('B' %in% to_use) {
+    B(pretty_image) <- runif(n=1, min=0, max=1)
+  }
+  return(pretty_image)
+}

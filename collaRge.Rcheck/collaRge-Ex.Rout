@@ -1,0 +1,150 @@
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "collaRge"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> base::assign(".ExTimings", "collaRge-Ex.timings", pos = 'CheckExEnv')
+> base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+> base::assign(".format_ptime",
++ function(x) {
++   if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
++   if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
++   options(OutDec = '.')
++   format(x[1L:3L], digits = 7L)
++ },
++ pos = 'CheckExEnv')
+> 
+> ### * </HEADER>
+> library('collaRge')
+Warning: replacing previous import ‘graphics::frame’ by ‘imager::frame’ when loading ‘collaRge’
+Warning: replacing previous import ‘imager::convolve’ by ‘stats::convolve’ when loading ‘collaRge’
+Warning: replacing previous import ‘imager::spectrum’ by ‘stats::spectrum’ when loading ‘collaRge’
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("create_collage")
+> ### * create_collage
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: create_collage
+> ### Title: A function to create a collage of randomly colourised image
+> ### Aliases: create_collage
+> ### Keywords: collage colours image pretty random
+> 
+> ### ** Examples
+> 
+> library(imager)
+Warning: package ‘imager’ was built under R version 3.6.2
+Loading required package: magrittr
+
+Attaching package: ‘imager’
+
+The following object is masked from ‘package:magrittr’:
+
+    add
+
+The following objects are masked from ‘package:stats’:
+
+    convolve, spectrum
+
+The following object is masked from ‘package:graphics’:
+
+    frame
+
+The following object is masked from ‘package:base’:
+
+    save.image
+
+> parrots.cp <- load.example("parrots")
+> create_collage(parrots.cp, plot_image=TRUE, filename_to_save = '~/Desktop/jungle.jpeg')
+Image. Width: 1536 pix Height: 1024 pix Depth: 1 Colour channels: 3 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("create_collage", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+
+detaching ‘package:imager’, ‘package:magrittr’
+
+> nameEx("randomise_colours")
+> ### * randomise_colours
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: randomise_colours
+> ### Title: A function to randomise colours in an image
+> ### Aliases: randomise_colours
+> ### Keywords: colours image pretty random
+> 
+> ### ** Examples
+> 
+> library(imager)
+Warning: package ‘imager’ was built under R version 3.6.2
+Loading required package: magrittr
+
+Attaching package: ‘imager’
+
+The following object is masked from ‘package:magrittr’:
+
+    add
+
+The following objects are masked from ‘package:stats’:
+
+    convolve, spectrum
+
+The following object is masked from ‘package:graphics’:
+
+    frame
+
+The following object is masked from ‘package:base’:
+
+    save.image
+
+> parrots.cp <- load.example("parrots")
+> randomise_colours(parrots.cp)
+Image. Width: 768 pix Height: 512 pix Depth: 1 Colour channels: 3 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("randomise_colours", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> ### * <FOOTER>
+> ###
+> cleanEx()
+
+detaching ‘package:imager’, ‘package:magrittr’
+
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  1.448 0.308 1.9 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

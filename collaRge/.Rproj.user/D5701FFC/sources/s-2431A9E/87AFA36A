@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1590955382599.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1168601543",
+    "id" : "87AFA36A",
+    "lastKnownWriteTime" : 1590957744,
+    "last_content_update" : 1590957744641,
+    "path" : "~/Desktop/randomprofilegen/collaRge/R/create_collage.R",
+    "project_path" : "R/create_collage.R",
+    "properties" : {
+        "cursorPosition" : "6,32",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
